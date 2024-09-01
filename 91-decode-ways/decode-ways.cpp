@@ -6,7 +6,7 @@ public:
     int n = s.length();
     vector<int> dp(n + 1, 0);
 
-    dp[0] = 1; \
+    dp[0] = 1; 
     dp[1] = (s[0] != '0') ? 1 : 0;  
 
     for (int i = 2; i <= n; ++i) {
