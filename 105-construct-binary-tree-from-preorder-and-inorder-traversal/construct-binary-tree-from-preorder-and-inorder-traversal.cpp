@@ -26,5 +26,6 @@ private:
         root->left = build(preorder, inMap, preIndex, inStart, inIndex - 1);
         root->right = build(preorder, inMap, preIndex, inIndex + 1, inEnd);
         return root;
+
     }
 };
