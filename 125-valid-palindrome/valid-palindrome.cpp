@@ -1,22 +1,25 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-    string normalized;
-    for (char c : s) {
-        if (isalnum(c)) {
-            normalized += tolower(c);
+        string cleaned = "";
+
+        for (char c : s) {
+            if (isalnum(c)) {
+                cleaned += tolower(c);
+            }
         }
-    }
-    
-    int left = 0, right = normalized.size() - 1;
-    while (left < right) {
-        if (normalized[left] != normalized[right]) {
-            return false;
+
+        int left = 0;
+        int right = cleaned.size() - 1;
+
+        while (left < right) {
+            if (cleaned[left] != cleaned[right]) {
+                return false;
+            }
+            left++;
+            right--;
         }
-        left++;
-        right--;
-    }
-    
-    return true;
+
+        return true;
     }
 };
